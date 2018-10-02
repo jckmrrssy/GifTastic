@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     // Initial topics array
-    var topics = ['Puppies', 'Kittens', 'Zebras', "Otters", "Giraffes", "Jaguar", "Nic Cage",];    
+    var topics = ['Puppies', 'Kittens', 'Zebras', "Otters", "Giraffes", "Jaguars", "Nic Cage",];    
 
     // Function to display gif info after being clicked 
     function displayGif() {
@@ -28,7 +28,7 @@ $(document).ready(function() {
                 gifImage.attr("data-still", results[i].images.fixed_height_still.url)
                 gifImage.attr("data-animate", results[i].images.fixed_height.url);
                 gifImage.attr("data-state", "still");
-                gifImage.addClass("giphyGif")
+                gifImage.addClass("giphyGif m-1");
                 gifDiv.append(gifImage);
                 gifDiv.append(p);
                 $("#giphyTime").append(gifDiv);
@@ -60,9 +60,7 @@ $(document).ready(function() {
         // Loops through topics array & creates a button for each one
         for (i=0; i < topics.length; i++) {
             var button = $("<button>");
-            button.addClass("gif-btn");
-            button.addClass("btn");
-            button.addClass("btn-secondary");
+            button.addClass("gif-btn btn btn-secondary m-1");
             button.attr("data-name", topics[i]);
             button.text(topics[i]);
             $("#buttonGen").append(button);
