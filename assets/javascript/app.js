@@ -18,19 +18,39 @@ $(document).ready(function() {
             method: "GET",
         }).then(function(response) {
             var results = response.data;
-            console.log(results);
 
             for (i=0; i < results.length; i++) {
                 var gifDiv = $("<div>");
-                gifDiv.addClass("giphyGif")
                 var rating = results[i].rating;
                 var p = $("<p>").text("Rating: " + rating);
                 var gifImage = $("<img>");
-                gifImage.attr("src", results[i].images.fixed_height_still.url);
+                var fixed = results[i].images.fixed_height_still.url;
+                var animated = results[i].images.fixed_height.url;
+                gifImage.attr("src", fixed);
+                gifImage.attr("data-state", "still");
+                gifImage.addClass("giphyGif")
                 gifDiv.append(gifImage);
                 gifDiv.append(p);
                 $("#giphyTime").append(gifDiv);
             };
+        
+            // Function that will change gif src from still to animated
+            function animateGif () {
+            var state = $(this).attr("data-state");
+                if (state === "still") {
+                    $(this).attr("src", animated);
+                    $(this).attr("data-state", "animated");
+                    console.log(animated);
+                } else {
+                    $(this).attr("src", fixed);
+                    $(this).attr("data-state", "still");
+                }
+    
+            };
+        
+            // Click listner to animate gifs
+            $(document).on("click", ".giphyGif", animateGif);
+        
         });
     };
 
@@ -46,17 +66,12 @@ $(document).ready(function() {
         };
     };
 
-    // Function that will change gif src from still to animated
-    function animateGif () {
-        var state = 
-    };
+  
 
 
 
     // Click listener to display gifs when a button gets clicked 
     $(document).on("click", ".gif-btn", displayGif);
-    // Click listner to animate gifs
-    $(document).on("click", ".giphyGif", animateGif);
     // Need to render buttons on initialization
     renderButtons();
 })
