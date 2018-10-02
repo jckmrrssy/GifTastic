@@ -22,7 +22,7 @@ $(document).ready(function() {
             for (i=0; i < results.length; i++) {
                 var gifDiv = $("<div>");
                 var rating = results[i].rating;
-                var p = $("<p>").text("Rating: " + rating);
+                var p = $("<p>").text("Rating: " + rating.toUpperCase());
                 var gifImage = $("<img>");
                 gifImage.attr("src", results[i].images.fixed_height_still.url);
                 gifImage.attr("data-still", results[i].images.fixed_height_still.url)
