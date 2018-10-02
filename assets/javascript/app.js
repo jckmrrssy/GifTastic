@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     // Initial topics array
-    var topics = ['Puppies', 'Kittens', 'Zebras',];    
+    var topics = ['Puppies', 'Kittens', 'Zebras', "Otters", "Giraffes", "Jaguar", "Nic Cage",];    
 
     // Function to display gif info after being clicked 
     function displayGif() {
@@ -55,16 +55,27 @@ $(document).ready(function() {
 
     // Function to create buttons from above array that will be used to select gifs to display
     function renderButtons () {
+        
+        $("#buttonGen").empty();
         // Loops through topics array & creates a button for each one
         for (i=0; i < topics.length; i++) {
             var button = $("<button>");
             button.addClass("gif-btn");
+            button.addClass("btn");
+            button.addClass("btn-secondary");
             button.attr("data-name", topics[i]);
             button.text(topics[i]);
             $("#buttonGen").append(button);
         };
     };
-
+    
+    // Will add searched term as a button and render it when add button is clicked 
+    $("#addButton").on("click", function () {
+        event.preventDefault();
+        var input = $("#userInput").val().trim();
+        topics.push(input);
+        renderButtons();
+    });
   
 
 

@@ -16,9 +16,14 @@
         <!-- Header -->
         <h1>Gif tastic!</h1>
         <!-- Buttons to be generated -->
-        <div class = 'row' id='buttonGen'>
-            <div class = 'col-lg-12'>
-                
+        <div class = 'row'>
+            <div class = 'col-lg-9' id='buttonGen'></div>
+            <div class = 'col-lg-3'>
+                <form>
+                    <label for="text-input">Want to add another?</label>
+                    <input type="text" id="userInput" placeholder="Search here"> 
+                    <button id="addButton" class='btn btn-success' type="submit">Add</button>
+                </form>
             </div>
         </div>
         <!-- Gifs to be appended -->
