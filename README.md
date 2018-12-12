@@ -1,4 +1,4 @@
-[Try it out](https://jckmrrssy.github.io/GifTastic/)
+#[Try it out!](https://jckmrrssy.github.io/GifTastic/)
 
 # Gif Tastic
 
