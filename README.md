@@ -13,11 +13,11 @@ To run the application locally, you will need to clone the repository to your lo
 
 HTTPS:
 ````
-https://github.com/jckmrrssy/GifTastic.git
+$ git clone https://github.com/jckmrrssy/GifTastic.git
 ````
 SSH:
 ````
-git@github.com:jckmrrssy/GifTastic.git
+$ git clone git@github.com:jckmrrssy/GifTastic.git
 ````
 
 Then, open index.html in your browser to get the app started. 
