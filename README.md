@@ -4,7 +4,7 @@ Application that uses the GIPHY API to make a dynamic web page that populates wi
 
 # [Try it out!](https://jckmrrssy.github.io/GifTastic/)
 
-## See the demo [here](https://drive.google.com/open?id=1cDPg80JN2aePx4qfPBeiJuRHi7UoK_BR)
+## See the demo [here](https://drive.google.com/open?id=12trJ3OIuUND_QjvvXzHrZx3QAWm6h-UL)
 
 ![image](./assets/GifTastic.png)
 
